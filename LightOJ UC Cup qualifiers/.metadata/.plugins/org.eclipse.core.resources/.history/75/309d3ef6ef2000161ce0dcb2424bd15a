@@ -1,0 +1,29 @@
+import java.util.Scanner;
+public class Main {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int T = scan.nextInt();
+		int N, amount;
+		String operation;
+		long sum;
+		for (int I = 1; I <= T; I++) {
+			N = scan.nextInt();
+			scan.nextLine();
+			sum = 0;
+			System.out.format("Case %d:", I);
+			for (int J = 1; J <= N; J++) {
+				operation = scan.next();
+				amount = scan.nextInt();
+				if (operation.equals("donate")) {
+					sum += amount;
+				}
+				if (operation.equals("report")) {
+					System.out.println(sum);
+					
+				}
+			}
+		}
+	}
+
+}

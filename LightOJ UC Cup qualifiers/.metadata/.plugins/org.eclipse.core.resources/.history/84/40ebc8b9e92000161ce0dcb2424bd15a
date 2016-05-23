@@ -1,0 +1,29 @@
+import java.util.*;
+class Main {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		int testCase = scan.nextInt();
+		scan.nextLine();
+		for (int I = 1; I <= testCase; I++) {
+			String str = scan.next();
+			int len = str.length();
+			int lastIndex = len - 1;
+			String frontStr = "";
+			String backStr = "";
+			boolean flag  = true;
+			for (int J = 0; J < (len/ 2); J++) {
+				if (str.charAt(J) != str.charAt(lastIndex - J)) {
+					flag = false;
+				}
+			}
+			if (flag) {
+				System.out.format("Case %d: Yes\n", I);
+			} else {
+				System.out.format("Case %d: No\n", I);
+			}
+			
+		}
+	}
+
+}
